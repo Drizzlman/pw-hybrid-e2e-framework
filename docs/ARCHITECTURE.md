@@ -23,6 +23,7 @@ We needed a public e-commerce site that actually works for automation. Non-negot
 - **Real public REST API** — `/api/createAccount`, `/api/deleteAccount` exist, which lets us do data setup/teardown via HTTP instead of clicking through forms.
 
 Oh, and we learned a couple of things the hard way:
+
 - The contact page lives at `/contact_us`, not `/contact`. Spent half a day on that gem.
 - Cart quantity isn't an input field — it's a disabled button. You change it on the product detail page using `#quantity`, then add to cart. Totally non-obvious.
 
@@ -35,8 +36,9 @@ Two layers work together:
 2. **`App` + pages/components/flows** (`src/ui/`) — drives the actual browser. The `registeredUser` fixture creates a unique user via API, the test logs in through the UI, and teardown deletes the account via API — even if an assertion fails midway.
 
 Why not the alternatives?
-- *UI-only setup* (register through the form every time) — slow and flaky.
-- *Storage-state reuse* (login once, replay cookies) — fast but brittle; sessions expire or get invalidated.
+
+- _UI-only setup_ (register through the form every time) — slow and flaky.
+- _Storage-state reuse_ (login once, replay cookies) — fast but brittle; sessions expire or get invalidated.
 
 Our hybrid is the sweet spot: one API call to create, a quick UI login, and guaranteed API cleanup.
 
@@ -64,6 +66,7 @@ Prefer roles, visible text, and `data-qa` attributes (the site ships them on for
 ## Config
 
 `src/config/env.ts` — zod validation at process startup:
+
 - explicit env vars take precedence;
 - missing vars fall back to sensible defaults pointing at the live site;
 - malformed values fail fast with a readable error.
@@ -89,4 +92,4 @@ One workflow — `.github/workflows/pr-validation.yml` — runs on every PR and 
 1. `verify` — typecheck, lint, format check.
 2. `ui-tests` — Chromium suite. HTML report and JUnit XML uploaded as artifacts even on failure.
 
-Why only one workflow? A nightly regression on a third-party live site mostly tests whether *their* servers are still up, not whether *our* code works. CI exists to catch regressions on our changes — and it does that just fine.
+Why only one workflow? A nightly regression on a third-party live site mostly tests whether _their_ servers are still up, not whether _our_ code works. CI exists to catch regressions on our changes — and it does that just fine.
