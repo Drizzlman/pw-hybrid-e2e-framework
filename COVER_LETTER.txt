@@ -1,0 +1,32 @@
+
+Dear Hiring Team,
+
+I’m writing to express my interest in the QA Automation Architect position. Over the last 11 years, I have specialized in driving quality engineering standards and architecting robust automation strategies for complex enterprise platforms. Because I also have a strong background in full-stack development, I approach QA not just as a final checkpoint, but as a core architectural pillar—ensuring systems are highly testable, reliable, and transparent from day one.
+
+How I Approach Engineering & Automation
+
+In my day-to-day work, I focus on embedding smart, scalable quality processes directly into the platform's lifecycle. Here is what that usually looks like:
+
+    Layered TypeScript & Playwright Architecture: I believe in keeping test codebases as clean as production code. By logically structuring page objects, reusable UI components, and API clients using TypeScript and Playwright, I ensure our test coverage remains highly maintainable as the platform scales.
+
+    Reliable CI/CD Quality Gates: I integrate testing directly into the deployment pipeline via GitHub Actions or GitLab CI/CD. By setting up fast PR gates and full cross-browser nightly regressions, the goal is catching issues early without slowing down the release cycle.
+
+    Deep API & Backend Validation: UI tests are great, but real confidence comes from the backend. I rely heavily on tools like Postman, OpenAPI, and k6 to validate complex services, whether it's testing GraphQL data flows or AWS infrastructure like Cognito and SQS.
+
+    AI-Enhanced Productivity: I actively use tools like Claude Code and Cursor to generate reusable test scenarios. This significantly speeds up test creation and frees up my time to focus on harder architectural QA challenges.
+
+The Experience I Bring to the Table
+
+My hands-on experience with Node.js and React gives me a unique advantage in QA: I deeply understand the underlying system architecture. This means I can collaborate closely with developers to build testability into the product from the ground up, rather than treating testing as an afterthought.
+
+
+
+Recently, for an advanced Financial Trading Platform, I orchestrated the automation strategies for their core workspace. By mapping out comprehensive end-to-end testing paths and validating secure AWS workflows, my team was able to cut manual regression efforts by 35% and drastically expand our coverage.
+
+Before that, on a global Cross-Border Delivery Platform, I facilitated architectural decisions across domains specifically to enforce high testability standards. By building robust API validation suites for our Shopify and Google Maps integrations, we didn't just catch bugs—we actively verified complex background jobs, confirming a 28% improvement in the system's synchronization efficiency.
+
+I’d love the chance to walk you through some of the QA architectural decisions I’ve made on past projects, discuss the inevitable trade-offs, and explore how my testing approach might fit into your current engineering goals.
+
+Kind regards,
+
+Aliaksei K.
